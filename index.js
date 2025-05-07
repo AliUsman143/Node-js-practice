@@ -1,5 +1,31 @@
-const colour=require("colours")
-console.log("hello world".red); // hello world
+const http = require("http");
+const arrydata = require("./api");
+http
+  .createServer((req, resp) => {
+    resp.writeHead(200, { "Content-Type": "application/json" });
+    resp.write(JSON.stringify(arrydata));
+    resp.end();
+  })
+  .listen(3000, () => {
+    console.log("server is running on port 3000");
+  });
+// const http = require("http");
+// const ararydata=require("./api");
+// http
+//   .createServer((req, res) => {
+//     res.writeHead(200, { "Content-Type": "application/json" });
+//     res.write(JSON.stringify(ararydata));
+//     res.end();
+//   })
+//   .listen(3000, () => {
+//     console.log("Server is running on http://localhost:3000");
+//   });
+
+// ---------------------------------------
+// const colour=require("colours")
+// console.log("hello world ki halll hy ".red); // hello world
+// console.log("bhai chawlyna mara kr ")
+
 // ---------------------------------------
 // const http = require("http");
 // http
@@ -12,7 +38,6 @@ console.log("hello world".red); // hello world
 // ---------------------------------------
 // const fs=require("fs");
 // fs.writeFileSync("hello.txt","hello world"); // hello world
-
 
 // ---------------------------------------
 // const app=require("./app.js");
