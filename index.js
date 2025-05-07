@@ -1,10 +1,13 @@
-const http = require("http");
-http
-  .createServer((req, resp) => {
-    resp.write("<h1> This is node js server </h1>");
-    resp.end();
-  })
-  .listen(4500);
+const colour=require("colours")
+console.log("hello world".red); // hello world
+// ---------------------------------------
+// const http = require("http");
+// http
+//   .createServer((req, resp) => {
+//     resp.write("<h1> This is node js server for practice </h1>");
+//     resp.end();
+//   })
+//   .listen(4500);
 
 // ---------------------------------------
 // const fs=require("fs");
